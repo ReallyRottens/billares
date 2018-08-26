@@ -1,0 +1,27 @@
+<div class="container">
+	<h1 class="h1">
+		Nueva partida
+	</h1>
+	<form>
+	  <div class="form-group">
+	    <label for="newGameformControlInput">Quién es el primer jugador?</label>
+	    <input type="text" class="form-control" id="newGameformControlInput" placeholder="un nombre">
+	  </div>
+	  <div class="form-group">
+	    <label for="newGameformControlInput">Quién es el segundo jugador?</label>
+	    <input type="text" class="form-control" id="newGameformControlInput" placeholder="otro nombre">
+	  </div>
+	  <div id="puntajes" class="form-group">
+	    <label for="newGameFormControlSelect">A cuántos puntos?</label>
+	    <select class="form-control" id="newGameFormControlSelect">
+	      <option *ngFor="let point of points" [value]="puntaje">{{point}}</option>
+	    </select>
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleFormControlTextarea1">Alguna frase para la posteridad?</label>
+	    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+	  </div>
+	</form>
+
+	TODO: mostrar últimos jugadores con la posibilidad de ser seleccionados
+</div>

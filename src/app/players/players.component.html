@@ -1,0 +1,16 @@
+<!--Debe mostrar una tabla con los puntos de cada jugador y un boton para agregarle un punto
+ quedando un contador para cada uno -->
+<div class="container column has-text-centered" *ngFor="let jugador of jugadores">
+	<div class="card border-primary mb-3" style="max-width: 18rem;">
+	  <div class="card-header">{{ jugador.nombre }}</div>
+	  <div class="card-body text-primary">
+	    <h5 class="card-title">Puntos hasta el momento</h5>
+	    <p class="card-text">{{jugador.puntos}}</p>
+	  </div>
+	  <div class="btn-group btn-group-justified">
+	  	<button type="button" class="btn btn-primary" (click)="sumarPuntos(jugador)">+ {{jugador.nombre}}</button>
+	  	<button type="button" class="btn btn-primary" (click)="restarPuntos(jugador)">- {{jugador.nombre}}</button>
+	  </div>
+	  
+	</div>
+</div>
